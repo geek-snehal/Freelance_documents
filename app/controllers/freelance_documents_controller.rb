@@ -13,31 +13,6 @@ class FreelanceDocumentsController < ApplicationController
     render json: @freelance_document
   end
 
-  # POST /freelance_documents
-  def create
-    @freelance_document = FreelanceDocument.new(freelance_document_params)
-
-    if @freelance_document.save
-      render json: @freelance_document, status: :created, location: @freelance_document
-    else
-      render json: @freelance_document.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /freelance_documents/1
-  def update
-    if @freelance_document.update(freelance_document_params)
-      render json: @freelance_document
-    else
-      render json: @freelance_document.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /freelance_documents/1
-  def destroy
-    @freelance_document.destroy
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_freelance_document
