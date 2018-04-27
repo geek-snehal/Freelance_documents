@@ -85,3 +85,12 @@ production:
   database: freelance_documents_production
   username: freelance_documents
   password: <%= ENV['FREELANCE_DOCUMENTS_DATABASE_PASSWORD'] %>
+
+production:
+  adapter:  postgresql
+  database: freelance_documents_production
+  username: root
+  password:
+  pool: 5
+  socket: /var/run/mysqld/mysqld.sock
+
